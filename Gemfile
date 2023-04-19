@@ -28,6 +28,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 6.0'
+  gem 'yard', '~> 0.9.34'
 end
 
 group :development do

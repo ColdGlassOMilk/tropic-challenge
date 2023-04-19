@@ -25,6 +25,14 @@ Submitted by [Nicholaus Brabant](https://www.linkedin.com/in/nick-brabant/)
 
 3. Navigate to [http://localhost:3000](http://localhost:3000)
 
+### :detective: Documentation
+
+```shell
+bundle exec yard server
+```
+
+Navigate to [http://localhost:8808](http://localhost:8808)
+
 ## :shark: Testing
 
 ```shell
