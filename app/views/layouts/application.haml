@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Tropic : #{yield(:page_title)}
+    %meta{ name: 'viewport', content: 'width=device-width,initial-scale=1' }
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    %link{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' }
+    = stylesheet_link_tag 'tailwind', 'inter-font', data: { 'turbo-track': 'reload' }
+    = stylesheet_link_tag 'application', data: { 'turbo-track': 'reload' }
+
+    = javascript_importmap_tags
+    %script{ src: 'https://cdn.tailwindcss.com' }
+
+  %body.text-slate-700.bg-slate-100.antialiased
+
+    .container.mt-4.mx-auto
+      = render CardComponent.new(title: yield(:page_title)) do |card|
+        - card.with_header do
+          = yield :header
+        = yield

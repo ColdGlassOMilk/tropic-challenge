@@ -1,0 +1,8 @@
+%table.items-center.w-full.bg-transparent.border-collapse
+  %thead
+    %tr.border.border-r-0.border-l-0{ style: 'background-color: #eeeeee;' }
+      %th.p-4.font-semibold{ style: 'text-align: left;' } Name
+      %th.p-4.font-semibold{ style: 'text-align: left;' } Email
+      %th.p-4.font-semibold{ style: 'text-align: left;' } Date Added
+  %tbody
+    = render Users::ListItemComponent.with_collection(@users)

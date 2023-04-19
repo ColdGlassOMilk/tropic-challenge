@@ -1,0 +1,26 @@
+= form_with(model: user, class: "contents", id: 'createUserForm') do |form|
+  - if user.errors.any?
+    #error_explanation.bg-red-50.text-red-500.p-4.font-medium.rounded-lg.mt-3
+      .flex.flex-rows-2
+        %i.fa.fa-fire.fa-6.pr-4{ style: 'font-size: 20pt !important; text-align: left;' }
+        %ul
+          - user.errors.each do |error|
+            %li= error.full_message
+
+  .flex.flex-cols-2
+    .my-5.pr-4{ class: 'w-1/4' }
+      .font-semibold= form.label :first_name
+      = form.text_field :first_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"
+
+    .my-5{ class: 'w-1/4' }
+      .font-semibold= form.label :last_name
+      = form.text_field :last_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"
+
+  .flex
+    .my-5{ class: 'w-1/2' }
+      .font-semibold= form.label :email
+      = form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full"
+
+  .my-5.font-semibold
+    = form.label 'Send Invitation'
+    = form.check_box :send_invite

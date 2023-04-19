@@ -1,0 +1,6 @@
+- content_for :page_title, 'Create New User'
+- content_for :header do
+  = render ButtonComponent.new(label: 'Create User', id: 'createUserBtn')
+
+.px-4
+  = render 'form', user: @user

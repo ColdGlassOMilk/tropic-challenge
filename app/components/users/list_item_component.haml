@@ -1,0 +1,6 @@
+%tr.border.border-r-0.border-l-0
+  %td.text-sm.p-4
+    = render Users::GravatarComponent.new(user: @user)
+    = @user.display_name
+  %td.text-sm.p-4= @user.email
+  %td.text-sm.p-4= @user.created_at.strftime('%-m/%-d/%Y')

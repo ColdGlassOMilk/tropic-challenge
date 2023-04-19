@@ -1,0 +1,10 @@
+.w-full.px-4
+  .relative.grid.grid-rows-1.min-w-0.break-words.bg-white.w-full.mb-6.shadow-lg.rounded-lg
+    .rounded-t.mb-0.px-4.py-3.border-0
+      .flex.flex-cols-2.items-center
+        .relative.w-full.px-4.max-w-full.flex-grow.flex-1
+          %h3.font-semibold.text-base.text-slate-700= @title
+        .relative.w-full.px-4.max-w-full.flex-grow.flex-1{ style: 'text-align: right;' }
+          %button.bg-indigo-500.text-white= header
+    .block.w-full.overflow-x-auto
+      = content
