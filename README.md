@@ -1,5 +1,7 @@
 # :palm_tree: Tropic Dev Challenge
 
+Submitted by [Nicholaus Brabant](https://www.linkedin.com/in/nick-brabant/)
+
 ## :beach_umbrella: Prerequisites
 
 | Library | Version |
