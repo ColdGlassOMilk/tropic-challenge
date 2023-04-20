@@ -15,8 +15,14 @@
 
   %body.text-slate-700.bg-slate-100.antialiased
 
+    -# Main Content
     .container.mt-4.mx-auto
       = render CardComponent.new(title: yield(:page_title)) do |card|
         - card.with_header do
           = yield :header
         = yield
+
+    -# Toast
+    - if notice.present?
+      = render ToastComponent.new(title: 'Success!', icon: 'check-circle') do
+        = notice

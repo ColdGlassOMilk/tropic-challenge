@@ -2,10 +2,4 @@
 - content_for :header do
   = render ButtonComponent.new(label: 'Create New User', href: new_user_path, icon: 'plus')
 
-- if notice.present?
-  %p#notice.p-4.bg-green-50.mb-5.text-green-500.font-medium.rounded-lg.inline-block
-    %i.fa.fa-check-circle
-    &nbsp;
-    = notice
-
 = render Users::ListComponent.new(users: @users)
