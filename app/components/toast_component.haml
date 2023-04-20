@@ -1,0 +1,24 @@
+.absolute.flex.w-min-full.w-full.justify-end{ style: 'top: 0;' }
+  .p-4.border-0.rounded.shadow-md.relative.m-4.bg-white.text-slate-600
+    - if @icon.present?
+      %span.text-xl.inline-block.mr-5.align-middle
+        %i{ class: "fa fa-#{@icon} text-green-500 text-3xl" }
+
+    %span.inline-block.align-middle
+      %strong.pr-16= @title
+
+      - if content.present?
+        .divider
+        .pr-16= content
+
+      %button{ class: 'absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none', onclick: 'closeToast(event)' }
+        %i.text-slate-300.fa.fa-times
+
+:javascript
+  function closeToast(event) {
+    let element = event.target;
+    while (element.nodeName !== "BUTTON") {
+      element = element.parentNode;
+    }
+    element.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode);
+  }
